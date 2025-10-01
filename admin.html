@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body data-theme="dark">
+
+    <header class="header">
+        <a href="#" class="nav-logo" style="color: #0ea5e9;">
+            <i class="fas fa-tachometer-alt"></i> ADMIN DASHBOARD
+        </a>
+        <div class="header-controls">
+             <a href="index.html" class="header-nav-link">
+                <i class="fas fa-sign-out-alt"></i> Logout
+            </a>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section id="dashboard">
+            <div class="section-container">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <i class="fas fa-eye stat-icon"></i>
+                        <div class="stat-info">
+                            <span class="stat-value" id="visit-count">0</span>
+                            <span class="stat-label">Total Visits</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-toggle-on stat-icon"></i>
+                        <div class="stat-info">
+                            <span class="stat-value" id="theme-toggles">0</span>
+                            <span class="stat-label">Theme Toggles</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-file-download stat-icon"></i>
+                        <div class="stat-info">
+                            <span class="stat-value" id="resume-downloads">0</span>
+                            <span class="stat-label">Resume Downloads</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-envelope-open-text stat-icon"></i>
+                        <div class="stat-info">
+                            <span class="stat-value" id="message-count">0</span>
+                            <span class="stat-label">Messages Received</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section-card" style="margin-top: 3rem;">
+                    <div class="messages-header">
+                        <h2 class="section-title">Recent Messages</h2>
+                        <button id="clear-data-btn" class="resume-button-about" style="background-color: #ff6b6b; border-color: #ff6b6b; color: white;">
+                            <i class="fas fa-trash"></i> Clear All Data
+                        </button>
+                    </div>
+                    <div id="messages-container" class="messages-container">
+                        </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="admin.js"></script>
+</body>
+</html>
